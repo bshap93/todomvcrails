@@ -1,0 +1,14 @@
+<section class="todoapp">
+  <header class="header">
+    <h1>Loginf</h1>
+      <%= form_tag(sessions_path) do %>
+
+        <%= text_field_tag :email, '', class: "new-todo", placeholder: "Login with email" %>
+        <%= text_field_tag :password, '', class: "new-todo", placeholder: "Choose a password, we encrypt!" %>
+        <%= submit_tag %>
+      <% end %>
+
+      <%= link_to "Login with Github", "/auth/github" %>
+  <footer class="footer">
+  </footer>
+</section>

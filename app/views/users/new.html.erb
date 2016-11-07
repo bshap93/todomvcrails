@@ -1,0 +1,12 @@
+<section class="todoapp">
+  <header class="header">
+    <h1>Signup</h1>
+      <%= form_for(@user) do |f| %>
+
+        <%= f.text_field :email, class: "new-todo", placeholder: "Register" %>
+        <%= f.text_field :password, class: "new-todo", placeholder: "Choose a password, we encrypt!" %>
+        <%= f.submit %>
+      <% end %>
+  <footer class="footer">
+  </footer>
+</section>

@@ -1,6 +1,7 @@
 class ListsController < ApplicationController
-
+  before_action :authentication_required
   def index
+
     @list = List.new
     @lists = List.all
     # render 'lists/index.html.erb'
@@ -23,6 +24,7 @@ class ListsController < ApplicationController
   private
 
     def list_params # strong parameters
+
       params.require(:list).permit(:name)
     end
 end

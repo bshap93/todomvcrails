@@ -1,9 +1,13 @@
 Rails.application.routes.draw do
   get 'items/create'
-
+  get '/login' => "sessions#new"
+  post '/sessions' => "sessions#create"
+  get '/logout' => "sessions#destroy"
+  resources :users, only: [:new, :create]
   resources :lists do
     resources :items
   end
+  get '/auth/:provider/callback' => 'sessions#create'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

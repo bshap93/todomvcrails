@@ -20,6 +20,15 @@
       <% end %>
     </ul>
   </section>
+
   <footer class="footer">
-  </footer>
+
+
 </section>
+</footer>
+<footer class="info">
+  <p>
+    Your're logged in as <%= current_user.email %>
+  </p>
+  <p><%= link_to "Logout", logout_path %></p>
+</footer>
